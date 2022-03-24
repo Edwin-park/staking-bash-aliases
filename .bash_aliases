@@ -21,6 +21,7 @@ alias lb.log='sudo journalctl -f -u lighthousebeacon.service'
 alias lv.log='sudo journalctl -f -u lighthousevalidator.service'
 
 alias n.reload='sudo systemctl daemon-reload'
+
 alias g.init='sudo systemctl start geth && sudo journalctl -f -u geth.service'
 alias b.init='sudo systemctl start beacon && sudo journalctl -f -u beacon.service'
 alias v.init='sudo systemctl start validator && sudo journalctl -f -u validator.service'
@@ -28,8 +29,6 @@ alias v.init='sudo systemctl start validator && sudo journalctl -f -u validator.
 alias lb.init='sudo systemctl start lighthousebeacon && sudo journalctl -f -u lighthousebeacon.service'
 alias lv.init='sudo systemctl start lighthousevalidator && sudo journalctl -f -u lighthousevalidator.service'
 
-alias n.disable='sudo systemctl disable geth && sudo systemctl disable beacon && sudo systemctl disable validator'
-alias n.enable='sudo systemctl enable geth && sudo systemctl enable beacon && sudo systemctl enable validator'
 
 alias g.edit='sudo nano /etc/systemd/system/geth.service'
 alias b.edit='sudo nano /etc/systemd/system/beacon.service'
@@ -46,25 +45,18 @@ alias lb.status='sudo systemctl status lighthousebeacon'
 alias lv.status='sudo systemctl status lighthousevalidator'
 
 
-# ShortCut Key for Node Maintenance (20/12/01)
 alias g.peer='curl -s http://localhost:6060/debug/metrics/prometheus | grep p2p_peers'
-alias b.peer='curl -s "localhost:3500/eth/v1alpha1/node/peers" | jq ".peers[].address" | wc -l'
-
-alias lb.peer='curl -X GET "http://localhost:5052/lighthouse/peers" -H  "accept: application/json" | jq'
-
 
 alias g.sync="curl -s -X POST 127.0.0.1:8545 -H \"Content-Type: application/json\" --data '{\"jsonrpc\":\"2.0\",\"method\":\"eth_syncing\",\"id\":1}' | jq"
 alias b.sync="curl -s -X GET \"http://127.0.0.1:3500/eth/v1alpha1/node/syncing\" -H \"accept: application/json\" | jq"
 
-alias lb.sync="curl -X GET "http://localhost:5052/lighthouse/syncing" -H  "accept: application/json" | jq"
+alias lb.sync="curl -X GET "http://localhost:5052/lighthouse/syncing" -H  "accept: application/json\" | jq"
 
-
+alias g.ver="geth version"
 alias p.ver="curl -s -X GET \"http://127.0.0.1:3500/eth/v1alpha1/node/version\" -H \"accept: application/json\" | jq [.version]"
 
 alias l.ver="cd ~ && /usr/local/bin/lighthouse --version"
 
-
-alias g.ver="geth version"
 
 alias g.error="sudo journalctl -u geth | grep -e warning -e error | tail -30"
 alias b.error="sudo journalctl -u beacon | grep -e warning -e error | tail -30"
