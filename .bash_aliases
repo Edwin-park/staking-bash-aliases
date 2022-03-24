@@ -63,4 +63,4 @@ alias b.error="sudo journalctl -u beacon | grep -e warning -e error | tail -30"
 alias v.error="sudo journalctl -u validator | grep -e warning -e error | tail -30"
 
 alias lb.error="sudo journalctl -u lighthousebeacon | grep -e warning -e error | tail -30"
-alias lv.error="sudo journalctl -u lighthousevalidator | grep -e warning -e error | tail -30"
+alias lv.error="sudo journalctl -u lighthousevalidator | grep -e warning -e error | tail -30" -w \"\n\""
