@@ -1,6 +1,7 @@
 # ShortCut Key for Local Maintenance (22/03/24) / change : edwin-park
 
 alias n.update='sudo apt update -y && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y'
+
 alias g.start='sudo systemctl start geth'
 alias g.stop='sudo systemctl stop geth'
 alias b.start='sudo systemctl start beacon'
@@ -23,8 +24,6 @@ alias lv.log='sudo journalctl -f -u lighthousevalidator.service'
 alias n.reload='sudo systemctl daemon-reload'
 
 alias g.init='sudo systemctl start geth && sudo journalctl -f -u geth.service'
-alias b.init='sudo systemctl start beacon && sudo journalctl -f -u beacon.service'
-alias v.init='sudo systemctl start validator && sudo journalctl -f -u validator.service'
 
 alias lb.init='sudo systemctl start lighthousebeacon && sudo journalctl -f -u lighthousebeacon.service'
 alias lv.init='sudo systemctl start lighthousevalidator && sudo journalctl -f -u lighthousevalidator.service'
@@ -46,11 +45,7 @@ alias lv.status='sudo systemctl status lighthousevalidator'
 
 
 alias g.peer='curl -s http://localhost:6060/debug/metrics/prometheus | grep p2p_peers'
-
 alias g.sync="curl -s -X POST 127.0.0.1:8545 -H \"Content-Type: application/json\" --data '{\"jsonrpc\":\"2.0\",\"method\":\"eth_syncing\",\"id\":1}' | jq"
-alias b.sync="curl -s -X GET \"http://127.0.0.1:3500/eth/v1alpha1/node/syncing\" -H \"accept: application/json\" | jq"
-
-alias lb.sync="curl -X GET "http://localhost:5052/lighthouse/syncing" -H  "accept: application/json\" | jq"
 
 alias g.ver="geth version"
 alias p.ver="curl -s -X GET \"http://127.0.0.1:3500/eth/v1alpha1/node/version\" -H \"accept: application/json\" | jq [.version]"
@@ -63,4 +58,4 @@ alias b.error="sudo journalctl -u beacon | grep -e warning -e error | tail -30"
 alias v.error="sudo journalctl -u validator | grep -e warning -e error | tail -30"
 
 alias lb.error="sudo journalctl -u lighthousebeacon | grep -e warning -e error | tail -30"
-alias lv.error="sudo journalctl -u lighthousevalidator | grep -e warning -e error | tail -30" -w \"\n\""
+alias lv.error="sudo journalctl -u lighthousevalidator | grep -e warning -e error | tail -30"
