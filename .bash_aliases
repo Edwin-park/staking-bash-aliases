@@ -52,7 +52,6 @@ alias p.ver="curl -s -X GET \"http://127.0.0.1:3500/eth/v1alpha1/node/version\" 
 
 alias l.ver="cd ~ && /usr/local/bin/lighthouse --version"
 
-
 alias g.error="sudo journalctl -u geth | grep -e warning -e error | tail -30"
 alias b.error="sudo journalctl -u beacon | grep -e warning -e error | tail -30"
 alias v.error="sudo journalctl -u validator | grep -e warning -e error | tail -30"
