@@ -21,6 +21,8 @@ alias v.log='sudo journalctl -f -u validator.service'
 alias lb.log='sudo journalctl -f -u lighthousebeacon.service'
 alias lv.log='sudo journalctl -f -u lighthousevalidator.service'
 
+alias rn.log='sudo journalctl -f -u rp-node.service'
+
 alias n.reload='sudo systemctl daemon-reload'
 
 alias g.init='sudo systemctl start geth && sudo journalctl -f -u geth.service'
@@ -35,6 +37,8 @@ alias v.edit='sudo nano /etc/systemd/system/validator.service'
 
 alias lb.edit='sudo nano /etc/systemd/system/lighthousebeacon.service'
 alias lv.edit='sudo nano /etc/systemd/system/lighthousevalidator.service'
+
+alias rn.edit='sudo nano /etc/systemd/system/rp-node.service'
 
 alias g.status='sudo systemctl status geth'
 alias b.status='sudo systemctl status beacon'
@@ -61,4 +65,6 @@ alias lv.error="sudo journalctl -u lighthousevalidator | grep -e warning -e erro
 
 
 alias rp="rocketpool -d /usr/local/bin/rocketpoold -c /srv/rocketpool"
+
+
 
