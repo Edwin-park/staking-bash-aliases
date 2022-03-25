@@ -57,10 +57,16 @@ alias rn.status='sudo systemctl status rp-node'
 alias g.peer='curl -s http://localhost:6060/debug/metrics/prometheus | grep p2p_peers'
 alias g.sync="curl -s -X POST 127.0.0.1:8545 -H \"Content-Type: application/json\" --data '{\"jsonrpc\":\"2.0\",\"method\":\"eth_syncing\",\"id\":1}' | jq"
 
+alias rn.sync="rocketpool -d /usr/local/bin/rocketpoold -c /srv/rocketpool node sync"
+
 alias g.ver="geth version"
 alias p.ver="curl -s -X GET \"http://127.0.0.1:3500/eth/v1alpha1/node/version\" -H \"accept: application/json\" | jq [.version]"
 
 alias l.ver="cd ~ && /usr/local/bin/lighthouse --version"
+
+alias rn.ver="rocketpool -d /usr/local/bin/rocketpoold -c /srv/rocketpool --version"
+
+
 
 alias g.error="sudo journalctl -u geth | grep -e warning -e error | tail -30"
 alias b.error="sudo journalctl -u beacon | grep -e warning -e error | tail -30"
