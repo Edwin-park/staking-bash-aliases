@@ -14,6 +14,9 @@ alias lb.stop='sudo systemctl stop lighthousebeacon'
 alias lv.start='sudo systemctl start lighthousevalidator'
 alias lv.stop='sudo systemctl stop lighthousevalidator'
 
+alias rn.start='sudo systemctl start rp-node'
+alias rn.stop='sudo systemctl stop rp-node'
+
 alias g.log='sudo journalctl -f -u geth.service'
 alias b.log='sudo journalctl -f -u beacon.service'
 alias v.log='sudo journalctl -f -u validator.service'
@@ -29,6 +32,8 @@ alias g.init='sudo systemctl start geth && sudo journalctl -f -u geth.service'
 
 alias lb.init='sudo systemctl start lighthousebeacon && sudo journalctl -f -u lighthousebeacon.service'
 alias lv.init='sudo systemctl start lighthousevalidator && sudo journalctl -f -u lighthousevalidator.service'
+alias rn.init='sudo systemctl start rp-node && sudo journalctl -f -u rp-node.service'
+
 
 
 alias g.edit='sudo nano /etc/systemd/system/geth.service'
@@ -46,6 +51,7 @@ alias v.status='sudo systemctl status validator'
 
 alias lb.status='sudo systemctl status lighthousebeacon'
 alias lv.status='sudo systemctl status lighthousevalidator'
+alias rn.status='sudo systemctl status rp-node'
 
 
 alias g.peer='curl -s http://localhost:6060/debug/metrics/prometheus | grep p2p_peers'
@@ -62,6 +68,8 @@ alias v.error="sudo journalctl -u validator | grep -e warning -e error | tail -3
 
 alias lb.error="sudo journalctl -u lighthousebeacon | grep -e warning -e error | tail -30"
 alias lv.error="sudo journalctl -u lighthousevalidator | grep -e warning -e error | tail -30"
+
+alias rn.error="sudo journalctl -u rp-node | grep -e warning -e error | tail -30"
 
 
 alias rp="rocketpool -d /usr/local/bin/rocketpoold -c /srv/rocketpool"
