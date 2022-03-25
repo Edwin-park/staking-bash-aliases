@@ -58,3 +58,7 @@ alias v.error="sudo journalctl -u validator | grep -e warning -e error | tail -3
 
 alias lb.error="sudo journalctl -u lighthousebeacon | grep -e warning -e error | tail -30"
 alias lv.error="sudo journalctl -u lighthousevalidator | grep -e warning -e error | tail -30"
+
+
+alias rp="rocketpool -d /usr/local/bin/rocketpoold -c /srv/rocketpool"
+
