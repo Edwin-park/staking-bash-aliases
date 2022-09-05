@@ -1,4 +1,4 @@
-# ShortCut Key for Local Maintenance (22/07/21) / change : edwin-park
+# ShortCut Key for Local Maintenance (22/09/05) / change : edwin-park
 
 alias n.update='sudo apt update -y && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y'
 
