@@ -75,6 +75,8 @@ alias l.ver="cd ~ && /usr/local/bin/lighthouse --version"
 
 alias t.ver="cd ~ && /usr/local/bin/teku/bin/teku --version"
 
+alias mev.ver="cd ~ && mev-boost -version"
+
 
 alias g.error="sudo journalctl -u geth | grep -e warning -e error | tail -30"
 alias b.error="sudo journalctl -u beacon | grep -e warning -e error | tail -30"
