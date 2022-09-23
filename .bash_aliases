@@ -7,7 +7,7 @@ alias s.update='cd ~ && rm ~/.bash_aliases && curl -s -O https://raw.githubuserc
 
 
 
-alias all.install='cd ~ && curl -O https://raw.githubusercontent.com/Edwin-park/Eth2staking/main/install.sh && sudo chmod 777 install.sh && sudo ./install.sh'
+alias all.install='cd ~ && rm ~/install.sh && curl -O https://raw.githubusercontent.com/Edwin-park/Eth2staking/main/install.sh && sudo chmod 777 install.sh && sudo ./install.sh'
 
 alias n.speed='cd ~ \
                && echo \“Writing...\" \
