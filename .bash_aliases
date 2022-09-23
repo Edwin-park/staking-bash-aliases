@@ -1,8 +1,8 @@
-alias s.ver='echo \“Version - 22.09.23\"'
+alias s.ver='echo \"Version - 22.09.23\"'
 
 alias s.list="alias"
 alias s.update='cd ~ && rm ~/.bash_aliases && curl -s -O https://raw.githubusercontent.com/Edwin-park/staking-bash-aliases/main/.bash_aliases \
-                && source ~/.bash_aliases && echo \“단축키 업데이트 성공\"'
+                && source ~/.bash_aliases && echo \"단축키 업데이트 성공\"'
 
 
 
