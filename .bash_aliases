@@ -17,7 +17,7 @@ alias n.speed='cd ~ \
                && echo \“*** Done ***\" \
                && rm deleteme.dat'
 
-alias n.update='sudo apt update -y && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y'
+alias n.update='cd ~ && curl -O https://raw.githubusercontent.com/Edwin-park/Eth2staking/main/update.sh && sudo chmod 777 update.sh && sudo ./update.sh'
 alias n.reload='sudo systemctl daemon-reload'
 alias n.enable='sudo systemctl enable geth && sudo systemctl enable lighthousebeacon && sudo systemctl enable lighthousevalidator && sudo systemctl enable mevboost'
 alias n.disable='sudo systemctl disable geth && sudo systemctl disable lighthousebeacon && sudo systemctl disable lighthousevalidator && sudo systemctl disable mevboost'
