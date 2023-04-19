@@ -17,7 +17,7 @@ alias n.speed='cd ~ \
                && echo \“*** Done ***\" \
                && rm deleteme.dat'
 
-alias r.update='cd ~ && curl -O https://raw.githubusercontent.com/Edwin-park/Eth2staking/main/update.sh && sudo chmod 777 update.sh && sudo ./update2.sh'
+alias r.update='cd ~ && curl -O https://raw.githubusercontent.com/Edwin-park/Eth2staking/main/update2.sh && sudo chmod 777 update2.sh && sudo ./update2.sh'
 
 alias n.update='cd ~ && curl -O https://raw.githubusercontent.com/Edwin-park/Eth2staking/main/update.sh && sudo chmod 777 update.sh && sudo ./update.sh'
 alias n.reload='sudo systemctl daemon-reload'
