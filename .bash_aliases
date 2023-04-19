@@ -1,4 +1,4 @@
-alias s.ver='echo \"Version - 22.09.23\"'
+alias s.ver='echo \"Version - 23.04.19\"'
 
 alias s.list="alias"
 alias s.update='cd ~ && rm ~/.bash_aliases && curl -s -O https://raw.githubusercontent.com/Edwin-park/staking-bash-aliases/main/.bash_aliases \
@@ -16,6 +16,8 @@ alias n.speed='cd ~ \
                && dd if=deleteme.dat of=/dev/null bs=32M count=64 iflag=direct \
                && echo \“*** Done ***\" \
                && rm deleteme.dat'
+
+alias r.update='cd ~ && curl -O https://raw.githubusercontent.com/Edwin-park/Eth2staking/main/update.sh && sudo chmod 777 update.sh && sudo ./update2.sh'
 
 alias n.update='cd ~ && curl -O https://raw.githubusercontent.com/Edwin-park/Eth2staking/main/update.sh && sudo chmod 777 update.sh && sudo ./update.sh'
 alias n.reload='sudo systemctl daemon-reload'
