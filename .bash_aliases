@@ -17,6 +17,9 @@ alias n.speed='cd ~ \
                && echo \“*** Done ***\" \
                && rm deleteme.dat'
 
+alias r.start='rocketpool service start'
+alias r.stop='rocketpool service stop'
+alias r.install='rocketpool service install -d'
 alias r.update='cd ~ && curl -O https://raw.githubusercontent.com/Edwin-park/Eth2staking/main/update2.sh && sudo chmod 777 update2.sh && sudo ./update2.sh'
 
 alias n.update='cd ~ && curl -O https://raw.githubusercontent.com/Edwin-park/Eth2staking/main/update.sh && sudo chmod 777 update.sh && sudo ./update.sh'
