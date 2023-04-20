@@ -1,4 +1,4 @@
-alias s.ver='echo \"Version - 23.04.19\"'
+alias s.ver='echo \"Version - 23.04.20\"'
 
 alias s.list="alias"
 alias s.update='cd ~ && rm ~/.bash_aliases && curl -s -O https://raw.githubusercontent.com/Edwin-park/staking-bash-aliases/main/.bash_aliases \
@@ -16,11 +16,21 @@ alias n.speed='cd ~ \
                && dd if=deleteme.dat of=/dev/null bs=32M count=64 iflag=direct \
                && echo \“*** Done ***\" \
                && rm deleteme.dat'
+               
+
+alias r.log='rocketpool service logs node'
+alias rg.log='rocketpool service logs eth1'
+alias rb.log='rocketpool service logs eth2'
+alias rv.log='rocketpool service logs validator'
+alias rm.log='rocketpool service logs mev-boost'
 
 alias r.start='rocketpool service start'
 alias r.stop='rocketpool service stop'
 alias r.install='rocketpool service install -d'
 alias r.update='cd ~ && curl -O https://raw.githubusercontent.com/Edwin-park/Eth2staking/main/update2.sh && sudo chmod 777 update2.sh && sudo ./update2.sh'
+
+
+
 
 alias n.update='cd ~ && curl -O https://raw.githubusercontent.com/Edwin-park/Eth2staking/main/update.sh && sudo chmod 777 update.sh && sudo ./update.sh'
 alias n.reload='sudo systemctl daemon-reload'
