@@ -1,4 +1,4 @@
-alias s.ver='echo \"Version - 23.04.20\"'
+alias s.ver='echo \"Version - 23.05.08\"'
 
 alias s.list="alias"
 alias s.update='cd ~ && rm ~/.bash_aliases && curl -s -O https://raw.githubusercontent.com/Edwin-park/staking-bash-aliases/main/.bash_aliases \
@@ -69,6 +69,7 @@ alias mev.status='sudo systemctl status mevboost'
 
 alias g.peer='curl -s http://localhost:6060/debug/metrics/prometheus | grep p2p_peers'
 alias g.sync="curl -s -X POST 127.0.0.1:8545 -H \"Content-Type: application/json\" --data '{\"jsonrpc\":\"2.0\",\"method\":\"eth_syncing\",\"id\":1}' | jq"
+alias b.sync="curl -s http://127.0.0.1:5052/eth/v1/node/syncing | jq"
 
 alias g.ver="geth version"
 alias l.ver="cd ~ && /usr/local/bin/lighthouse --version"
