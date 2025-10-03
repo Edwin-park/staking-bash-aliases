@@ -1,4 +1,4 @@
-alias s.ver='echo \"Version - 23.05.08\"'
+alias s.ver='echo \"Version - 25.10.02\"'
 
 alias s.list="alias"
 alias s.update='cd ~ && rm ~/.bash_aliases && curl -s -O https://raw.githubusercontent.com/Edwin-park/staking-bash-aliases/main/.bash_aliases \
