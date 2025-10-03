@@ -82,3 +82,5 @@ alias mev.error="sudo journalctl -u mevboost | grep -e warning -e error | tail -
 
 
 
+alias eth.duties="eth-duties --beacon-nodes http://127.0.0.1:5052 --validators-file ~/validators.lst --omit-attestation-duties"
+
